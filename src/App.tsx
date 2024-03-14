@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <div>
-        <h1>은혜교회</h1>
+        <h1>welcome 은혜교회</h1>
       </div>
     </>
   );
