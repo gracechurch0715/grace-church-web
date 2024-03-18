@@ -1,5 +1,11 @@
+import Visual from "components/templates/main/Visual";
+
 const Main = () => {
-  return <div>main</div>;
+  return (
+    <>
+      <Visual />
+    </>
+  );
 };
 
 export default Main;
