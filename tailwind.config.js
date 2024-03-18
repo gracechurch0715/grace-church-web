@@ -11,10 +11,17 @@ export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      width: {
+        wrapper: "1200px",
+      },
+      maxWidth: {
+        wrapper: "1200px",
+      },
       colors: {
-        "primary-dark": "#0B243A",
+        "primary-dark": "#0A1621",
         "primary-light": "#529EE4",
         primary: "#3481C9",
+        "gray-light": "#dddddd",
       },
       margin: px_4multiple,
       padding: px_4multiple,

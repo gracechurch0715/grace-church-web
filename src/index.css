@@ -12,8 +12,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 12px;
+  font-weight: 400;
   line-height: 150%;
-  color: #000;
+  color: #0a1621;
 }
 
 html,
