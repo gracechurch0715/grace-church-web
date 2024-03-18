@@ -4,6 +4,6 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/grace-church-web/.",
+  base: "/grace-church-web/",
   plugins: [react(), tsconfigPaths()],
 });

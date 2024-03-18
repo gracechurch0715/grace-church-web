@@ -8,7 +8,7 @@ const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="/grace-church-web/" element={<Layout />}>
           <Route path="" element={<Main />} />
           <Route path="notice" element={<Notice />} />
         </Route>
