@@ -39,7 +39,7 @@ const Worship = () => {
             너희 몸을 하나님이 기뻐하시는 거룩한 산제사로 드리라 (롬12:1)
           </BibleText>
           {worships.map(({ category, title, bibleVerse, image }) => (
-            <div className="max-w-[480px] mt-25 text-center">
+            <div key={category} className="max-w-[480px] mt-25 text-center">
               <ImgWrap>
                 <img src={image} alt="" />
               </ImgWrap>
