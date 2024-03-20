@@ -10,6 +10,10 @@ const px_4multiple = {
 export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
+    screens: {
+      lg: { max: "1023px" },
+      md: { max: "767px" },
+    },
     extend: {
       width: {
         wrapper: "1200px",
