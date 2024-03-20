@@ -59,6 +59,7 @@ const Title = styled.h2`
   }
   @media screen and (max-width: 767px) {
     font-size: 24px;
+    letter-spacing: -1px;
   }
 `;
 
