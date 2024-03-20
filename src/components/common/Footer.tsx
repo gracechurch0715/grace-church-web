@@ -21,6 +21,11 @@ const Contact = styled.p`
   font-size: 16px;
   color: ${COLORS.PRIMARY_DARK};
   letter-spacing: -1px;
+  word-break: keep-all;
+
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
+  }
 `;
 
 const Copy = styled.p`
@@ -29,6 +34,10 @@ const Copy = styled.p`
   color: #b7b7b7;
   font-style: italic;
   letter-spacing: -1px;
+
+  @media screen and (max-width: 767px) {
+    font-size: 12px;
+  }
 `;
 
 export default Footer;
