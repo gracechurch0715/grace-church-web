@@ -26,6 +26,16 @@ const Container = styled.section`
   height: 500px;
   background: url(${BG_URL}) no-repeat center;
   background-size: cover;
+  padding: 0 20px;
+
+  @media screen and (max-width: 1023px) {
+    height: auto;
+    padding: 80px 0;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 60px 30px;
+    background-position: 70% center;
+  }
 `;
 
 const Inner = styled.div`
@@ -43,6 +53,13 @@ const Title = styled.h2`
   font-size: 40px;
   color: ${COLORS.PRIMARY};
   letter-spacing: -2.4px;
+
+  @media screen and (max-width: 1023px) {
+    font-size: 32px;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 24px;
+  }
 `;
 
 const Content = styled.p`
@@ -56,6 +73,26 @@ const Content = styled.p`
 
   strong {
     font-weight: 700;
+  }
+
+  @media screen and (max-width: 1023px) {
+    &,
+    strong {
+      font-size: 50px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    br {
+      display: none;
+    }
+
+    &,
+    strong {
+      font-size: 30px;
+      letter-spacing: -3px;
+    }
+
+    word-break: keep-all;
   }
 `;
 
