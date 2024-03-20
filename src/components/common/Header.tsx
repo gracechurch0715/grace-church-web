@@ -11,7 +11,7 @@ const Header = () => {
     <header className="border-0 border-b border-gray-light px-5">
       <InnerWrapper>
         <h1 className="md:w-[140px]">
-          <Link to="/">
+          <Link to="/grace-church-web">
             <img src={logo} alt="grace church" />
           </Link>
         </h1>
