@@ -50,6 +50,13 @@ const SwiperVisual = styled(Swiper)`
   .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
     background-color: ${COLORS.PRIMARY_LIGHT};
   }
+
+  @media screen and (max-width: 767px) {
+    .swiper-horizontal > .swiper-pagination-progressbar,
+    .swiper-pagination-progressbar.swiper-pagination-horizontal {
+      height: 3px;
+    }
+  }
 `;
 
 export default Visual;
