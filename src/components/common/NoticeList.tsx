@@ -11,10 +11,6 @@ interface Props {
 const NoticeList = ({ notices }: Props) => {
   return (
     <Table>
-      <colgroup>
-        <col width="*" />
-        <col width="200px" />
-      </colgroup>
       <tbody>
         {notices.map((notice) => {
           const { id, title, content, date } = notice;
@@ -44,10 +40,23 @@ const Td = styled.td<{ $align?: Align }>`
   padding: 30px 20px;
   vertical-align: middle;
   text-align: ${({ $align }) => $align || "left"};
+
+  @media screen and (max-width: 767px) {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 0 20px;
+  }
 `;
 
 const Tr = styled.tr`
   border-bottom: 1px solid ${COLORS.GRAY_LIGHT};
+
+  @media screen and (max-width: 767px) {
+    display: block;
+    width: 100%;
+    padding: 26px 0;
+  }
 `;
 
 const Title = styled.p`
@@ -60,6 +69,12 @@ const Title = styled.p`
   letter-spacing: -2.4px;
   line-height: 130%;
   font-weight: 700;
+
+  @media screen and (max-width: 767px) {
+    font-size: 16px;
+    margin: 0;
+    letter-spacing: -1px;
+  }
 `;
 
 const Content = styled.p`
@@ -69,12 +84,17 @@ const Content = styled.p`
   width: 100%;
   font-size: 16px;
   color: #555;
-  letter-spacing: -1.6px;
+  letter-spacing: -1px;
 `;
 
 const Date = styled.p`
   font-size: 16px;
   color: #929292;
+
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
+    margin-top: 10px;
+  }
 `;
 
 export default NoticeList;

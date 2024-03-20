@@ -8,12 +8,14 @@ import logo from "assets/images/logo.svg";
 
 const Header = () => {
   return (
-    <header className="border-0 border-b border-gray-light">
+    <header className="border-0 border-b border-gray-light px-5">
       <InnerWrapper>
-        <h1>
-          <img src={logo} alt="grace church" />
+        <h1 className="md:w-[140px]">
+          <Link to="/">
+            <img src={logo} alt="grace church" />
+          </Link>
         </h1>
-        <div className="flex gap-5">
+        <div className="flex gap-5 md:gap-3">
           <MenuItem
             to="https://blog.naver.com/gracechurch0715/223326818182"
             target="_blank"
@@ -34,6 +36,10 @@ const InnerWrapper = styled.div`
   max-width: ${WRAPPER_WIDTH}px;
   height: 80px;
   margin: 0 auto;
+
+  @media screen and (max-width: 767px) {
+    height: 60px;
+  }
 `;
 
 const MenuItem = styled(Link)`
@@ -42,6 +48,10 @@ const MenuItem = styled(Link)`
 
   &:hover {
     color: ${COLORS.PRIMARY};
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
   }
 `;
 

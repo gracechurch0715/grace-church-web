@@ -22,12 +22,24 @@ const Visual = () => {
         <img
           src="https://onedrive.live.com/embed?resid=C307F97E37B29271%21113&authkey=%21AAit7S3rqkF7-Us&width=1920&height=1000"
           alt=""
+          className="lg:hidden"
+        />
+        <img
+          src="https://onedrive.live.com/embed?resid=C307F97E37B29271%21120&authkey=%21AGYiiK719ObB3iQ&width=1023&height=840"
+          alt=""
+          className="hidden lg:block"
         />
       </SwiperSlide>
       <SwiperSlide>
         <img
           src="https://onedrive.live.com/embed?resid=C307F97E37B29271%21114&authkey=%21ACezNXRukG0s_VM&width=1920&height=1000"
           alt=""
+          className="lg:hidden"
+        />
+        <img
+          src="https://onedrive.live.com/embed?resid=C307F97E37B29271%21119&authkey=%21APyrKw3h2jlbQXw&width=1023&height=840"
+          alt=""
+          className="hidden lg:block"
         />
       </SwiperSlide>
     </SwiperVisual>
@@ -37,6 +49,13 @@ const Visual = () => {
 const SwiperVisual = styled(Swiper)`
   .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
     background-color: ${COLORS.PRIMARY_LIGHT};
+  }
+
+  @media screen and (max-width: 767px) {
+    .swiper-horizontal > .swiper-pagination-progressbar,
+    .swiper-pagination-progressbar.swiper-pagination-horizontal {
+      height: 3px;
+    }
   }
 `;
 

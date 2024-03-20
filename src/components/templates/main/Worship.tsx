@@ -32,14 +32,17 @@ const Worship = () => {
   return (
     <Container>
       <div className="flex-1">
-        <div className="flex flex-col items-center py-30">
+        <div className="flex flex-col items-center py-30 px-15 lg:py-20 md:px-8">
           <Title>WORSHIP</Title>
           <Line />
           <BibleText>
             너희 몸을 하나님이 기뻐하시는 거룩한 산제사로 드리라 (롬12:1)
           </BibleText>
           {worships.map(({ category, title, bibleVerse, image }) => (
-            <div key={category} className="max-w-[480px] mt-25 text-center">
+            <div
+              key={category}
+              className="max-w-[480px] mt-25 text-center md:mt-15"
+            >
               <ImgWrap>
                 <img src={image} alt="" />
               </ImgWrap>
@@ -61,6 +64,12 @@ const Container = styled.section`
   background: #154068;
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: 1023px) {
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+  }
 `;
 
 const Right = styled.div`
@@ -71,12 +80,24 @@ const Right = styled.div`
   height: 100vh;
   background: url(${BG_URL}) no-repeat center;
   background-size: cover;
+
+  @media screen and (max-width: 1023px) {
+    display: none;
+  }
 `;
 
 const Title = styled.h2`
   font-size: 40px;
   color: #fff;
   letter-spacing: -2.4px;
+
+  @media screen and (max-width: 1023px) {
+    font-size: 32px;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 24px;
+    letter-spacing: -1px;
+  }
 `;
 
 const Line = styled.span`
@@ -85,6 +106,10 @@ const Line = styled.span`
   width: 50px;
   height: 1px;
   background-color: #fff;
+
+  @media screen and (max-width: 767px) {
+    width: 30px;
+  }
 `;
 
 const BibleText = styled.p`
@@ -92,6 +117,12 @@ const BibleText = styled.p`
   font-size: 20px;
   color: #fff;
   letter-spacing: -2px;
+  text-align: center;
+  word-break: keep-all;
+
+  @media screen and (max-width: 767px) {
+    font-size: 16px;
+  }
 `;
 
 const ImgWrap = styled.div`
@@ -102,6 +133,10 @@ const ImgWrap = styled.div`
   img {
     width: 100%;
     height: 100%;
+  }
+
+  @media screen and (max-width: 767px) {
+    height: 240px;
   }
 `;
 
@@ -128,6 +163,11 @@ const SermonTitle = styled.h4`
   line-height: 130%;
   font-weight: 700;
   letter-spacing: -2px;
+  word-break: keep-all;
+
+  @media screen and (max-width: 767px) {
+    font-size: 28px;
+  }
 `;
 
 const Verse = styled.p`
@@ -136,6 +176,10 @@ const Verse = styled.p`
   line-height: 130%;
   font-weight: 400;
   letter-spacing: -2px;
+
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
+  }
 `;
 
 export default Worship;
