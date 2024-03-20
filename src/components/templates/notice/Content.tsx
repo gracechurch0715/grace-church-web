@@ -8,7 +8,7 @@ import notices from "datas/noties";
 import arrowLeft from "assets/images/arrow-left.svg";
 import arrowRight from "assets/images/arrow-right.svg";
 
-const arr = [1, 2, 3];
+const arr = [1, 2, 3, 4, 5];
 
 const NoticeContent = () => {
   return (
@@ -18,7 +18,7 @@ const NoticeContent = () => {
         <Btn>
           <img src={arrowLeft} alt="" />
         </Btn>
-        <ul className="flex gap-4 items-center">
+        <ul className="flex gap-4 items-center md:gap-3">
           {arr.map((v, i) => (
             <Page key={i} $active={i === 0}>
               {i + 1}
@@ -44,6 +44,10 @@ const Page = styled.li<{ $active: boolean }>`
   &:hover {
     text-decoration: ${({ $active }) => ($active ? "none" : "underline")};
     cursor: pointer;
+  }
+
+  @media screen and (max-width: 1023px) {
+    font-size: 14px;
   }
 `;
 
