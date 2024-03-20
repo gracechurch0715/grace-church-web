@@ -11,7 +11,9 @@ const Header = () => {
     <header className="border-0 border-b border-gray-light">
       <InnerWrapper>
         <h1>
-          <img src={logo} alt="grace church" />
+          <Link to="/">
+            <img src={logo} alt="grace church" />
+          </Link>
         </h1>
         <div className="flex gap-5">
           <MenuItem

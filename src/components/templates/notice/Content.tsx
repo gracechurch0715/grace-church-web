@@ -20,7 +20,9 @@ const NoticeContent = () => {
         </Btn>
         <ul className="flex gap-4 items-center">
           {arr.map((v, i) => (
-            <Page $active={i === 0}>{i + 1}</Page>
+            <Page key={i} $active={i === 0}>
+              {i + 1}
+            </Page>
           ))}
         </ul>
         <Btn>
