@@ -89,7 +89,7 @@ const Content = styled.p`
 
     &,
     strong {
-      font-size: 30px;
+      font-size: 28px;
       letter-spacing: -3px;
     }
 
