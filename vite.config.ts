@@ -6,4 +6,15 @@ import tsconfigPaths from "vite-tsconfig-paths";
 export default defineConfig({
   base: "./",
   plugins: [react(), tsconfigPaths()],
+  server: {
+    proxy: {
+      "/api": {
+        target: "https://api.notion.com/v1/databases",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ""),
+        secure: false,
+        ws: true,
+      },
+    },
+  },
 });
