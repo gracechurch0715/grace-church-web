@@ -66,7 +66,7 @@ const Title = styled.h2`
 const Content = styled.p`
   &,
   strong {
-    font-size: 64px;
+    font-size: 60px;
     letter-spacing: -6px;
     font-weight: 300;
     line-height: 120%;
@@ -89,7 +89,7 @@ const Content = styled.p`
 
     &,
     strong {
-      font-size: 30px;
+      font-size: 28px;
       letter-spacing: -3px;
     }
 
