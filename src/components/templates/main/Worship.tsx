@@ -38,7 +38,7 @@ const Worship = () => {
           {worships.map(({ category, title, bibleVerse, image }) => (
             <div
               key={category}
-              className="max-w-[480px] mt-20 text-center md:mt-15"
+              className="max-w-[480px] mt-20 text-center md:mt-10 md:mb-5"
             >
               <ImgWrap>
                 <img src={image} alt="" />
